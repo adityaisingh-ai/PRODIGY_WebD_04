@@ -1,0 +1,443 @@
+/* =========================
+   General Settings
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1020;
+    color: white;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   Navigation
+========================= */
+
+nav {
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #0b1020;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+
+    border-bottom: 1px solid #202840;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #6c63ff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #6c63ff;
+}
+
+
+/* =========================
+   Home Section
+========================= */
+
+.hero {
+    min-height: 100vh;
+    padding: 120px 8% 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background:
+        radial-gradient(circle at 80% 30%, #25205c, transparent 30%),
+        #0b1020;
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.small-text {
+    color: #6c63ff;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    margin: 10px 0;
+}
+
+.hero h2 {
+    font-size: 28px;
+    color: #b8b8c7;
+    margin-bottom: 20px;
+}
+
+.hero-text > p:not(.small-text) {
+    color: #aaaabd;
+    font-size: 18px;
+    max-width: 600px;
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+
+    background: #6c63ff;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: #554cff;
+}
+
+.btn.secondary {
+    background: transparent;
+    border: 1px solid #6c63ff;
+}
+
+.btn.secondary:hover {
+    background: #6c63ff;
+}
+
+
+/* =========================
+   Profile Image
+========================= */
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-circle {
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 80px;
+    font-weight: bold;
+
+    color: white;
+
+    background: linear-gradient(135deg, #6c63ff, #00c6ff);
+
+    box-shadow: 0 0 60px rgba(108, 99, 255, 0.4);
+}
+
+
+/* =========================
+   Common Section
+========================= */
+
+section {
+    padding: 100px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+
+    width: 60px;
+    height: 4px;
+
+    background: #6c63ff;
+
+    margin: 12px auto;
+    border-radius: 5px;
+}
+
+
+/* =========================
+   About
+========================= */
+
+#about {
+    background: #10162a;
+}
+
+.about-text {
+    max-width: 850px;
+    margin: auto;
+
+    text-align: center;
+
+    color: #aaaabd;
+    font-size: 18px;
+}
+
+.about-info {
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.about-info div {
+    width: 30%;
+    padding: 25px;
+
+    background: #171e35;
+    border-radius: 12px;
+
+    text-align: center;
+
+    border: 1px solid #252d48;
+}
+
+.about-info h3 {
+    color: #6c63ff;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   Skills
+========================= */
+
+.skills-container {
+    max-width: 900px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.skill {
+    padding: 20px;
+
+    text-align: center;
+
+    background: #171e35;
+
+    border-radius: 10px;
+
+    border: 1px solid #252d48;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    border-color: #6c63ff;
+    color: #6c63ff;
+}
+
+
+/* =========================
+   Projects
+========================= */
+
+#projects {
+    background: #10162a;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.project-card {
+    padding: 30px;
+
+    background: #171e35;
+
+    border-radius: 12px;
+
+    border: 1px solid #252d48;
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: #6c63ff;
+}
+
+.project-card h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: #6c63ff;
+}
+
+.project-card p {
+    color: #aaaabd;
+    margin-bottom: 20px;
+}
+
+.project-card span {
+    font-size: 14px;
+    color: #00c6ff;
+}
+
+
+/* =========================
+   Contact
+========================= */
+
+#contact {
+    text-align: center;
+}
+
+#contact > p {
+    color: #aaaabd;
+}
+
+.contact-info {
+    margin-top: 30px;
+}
+
+.contact-info p {
+    margin: 10px;
+    color: #d5d5df;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    background: #070b16;
+
+    color: #777;
+}
+
+
+/* =========================
+   Mobile Responsive
+========================= */
+
+@media (max-width: 800px) {
+
+    nav {
+        padding: 15px 5%;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .profile-circle {
+        width: 220px;
+        height: 220px;
+        font-size: 60px;
+    }
+
+    .about-info {
+        flex-direction: column;
+    }
+
+    .about-info div {
+        width: 100%;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+.profile-photo {
+    width: 300px;
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid #6c63ff;
+
+    box-shadow: 0 0 60px rgba(108, 99, 255, 0.4);
+}
